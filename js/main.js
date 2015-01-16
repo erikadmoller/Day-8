@@ -30,13 +30,18 @@ var guessGame = function() {
 
 };
 
-var userChoice = prompt("Do you want to guess?"); //first prompt box
+var userChoice = prompt("Guess a number!"); //first prompt box
 
-if(userChoice === "yes") {
-	userChoice = window.prompt("Guess a number between 1 and 100!") //second prompt box
-	parseInt(userChoice, 10);
-	userChoice = parseInt(userChoice); //parseInt converts the userChoice from a string into a number
+if(isNaN(userChoice)) {
+	void alert ("That's not a number, reload your browser!");
+	throw 'That is not a number!';
 }
+
+// if(userChoice === "yes") {
+// 	userChoice = window.prompt("Guess a number between 1 and 100!") //second prompt box
+// 	parseInt(userChoice, 10);
+// 	userChoice = parseInt(userChoice); //parseInt converts the userChoice from a string into a number
+// }
 
 guessGame();
 
